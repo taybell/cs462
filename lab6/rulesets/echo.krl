@@ -15,7 +15,7 @@ hello world echo
   rule hello_world is active {
     select when echo hello
     send_directive("say") with
-      something = "Hello World";
+      something = "Hello World from Taylor";
   }
    
   rule echo is active {
