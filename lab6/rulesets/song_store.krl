@@ -45,7 +45,7 @@ Song Store
     select when explicit found_hymn
       pre {
         h = {time:now() : event:attr("hymn")};
-        hymns = s.put(ent:hymns);
+        hymns = h.put(ent:hymns);
       }
       {
         noop();
