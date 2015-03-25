@@ -29,7 +29,7 @@ See Songs Part2
   }
 
   rule find_hymn is active {
-    select when explicit sung song re#/.*god.*/i# setting(m)
+    select when explicit sung song re#/(.*god.*)/#i setting(m)
     pre {
 
     }
