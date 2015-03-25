@@ -13,10 +13,12 @@ Song Store
   }
   global {
     songs = function() {
-      ent:songs;
+      s = ent:songs;
+      s;
     };
     hymns = function() {
-      ent:hymns;     
+      h = ent:hymns;     
+      h
     };
     secular_music = function() {
       diff = songs.values().difference(hymns.values());
