@@ -21,7 +21,7 @@ Song Store
       h;
     };
     secular_music = function() {
-      diff = hymns.values().difference(songs.values());
+      diff = ent:songs.values().difference(ent:hymns.values());
       diff;
     };
    
