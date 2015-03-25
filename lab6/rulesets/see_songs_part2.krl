@@ -14,7 +14,31 @@ See Songs Part2
    
   rule songs is active {
     select when echo message msg_type "(song)"
-    send_directive("sing") with
-      song = event:attr("input");
+    pre {
+
+    }
+    {
+      send_directive("sing") with
+        song = event:attr("input");
+    }
+    always {
+      raise explicit event "sung" 
+       with song = event:attr("song");
+    }
+
+  }
+
+  rule find_hymn is active {
+    select when explicit sung song "(.*god.*)" setting(m)
+    pre {
+
+    }
+    {
+      noop();
+    }
+    always {
+      raise explicit event "found_hymn"
+        with song = event:attr("song")
+    }
   }
 }
