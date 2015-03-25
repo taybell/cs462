@@ -18,7 +18,7 @@ Song Store
     };
     hymns = function() {
       h = ent:hymns;     
-      h
+      h;
     };
     secular_music = function() {
       diff = songs.values().difference(hymns.values());
