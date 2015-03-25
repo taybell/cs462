@@ -38,7 +38,7 @@ See Songs Part2
     }
     always {
       raise explicit event "found_hymn"
-        with hymn = event:attr("song")
+        with hymn = m
     }
   }
 }
