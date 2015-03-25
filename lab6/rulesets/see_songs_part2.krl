@@ -23,7 +23,7 @@ See Songs Part2
     }
     always {
       raise explicit event "sung" 
-       with song = event:attr("song");
+       with song = event:attr("input");
     }
 
   }
