@@ -73,6 +73,12 @@ Song Store
   rule list_songs is active {
     select when list songs
     send_directive("songies") with
-      something = ent:songs;
+      songs = ent:songs;
+  }
+
+  rule list_hymns is active {
+    select when list hymns
+    send_directive("hymnies") with
+      hymns = ent:hymns;
   }
 }
