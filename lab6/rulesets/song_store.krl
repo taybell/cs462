@@ -69,4 +69,10 @@ Song Store
         clear ent:hymns;
       }
   }
+
+  rule list_songs is active {
+    select when list songs
+    send_directive("songies") with
+      something = ent:songs;
+  }
 }
